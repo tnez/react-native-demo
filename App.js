@@ -1,23 +1,27 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import SBGStatusBar from './components/SBGStatusBar'
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <SBGStatusBar />
+        <Text style={styles.content}>Lo, there be dragons...</Text>
       </View>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'steelblue',
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+  content: {
+    color: 'white',
+    fontSize: 28,
+  },
+})
