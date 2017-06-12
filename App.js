@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import SBGStatusBar from './components/SBGStatusBar'
+import SBGStatusBar from './src/components/SBGStatusBar'
 
 export default class App extends React.Component {
   render() {

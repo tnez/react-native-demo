@@ -2,7 +2,7 @@ import { Platform, StyleSheet } from 'react-native'
 
 const styles = {
   container: {
-    height: 20,
+    height: Platform.OS === 'ios' ? 20 : 0,
   },
 }
 
