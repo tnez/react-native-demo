@@ -1,13 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import SBGStatusBar from './src/components/SBGStatusBar'
+import SBGAppBar from './src/components/SBGAppBar'
 
 export default class App extends React.Component {
   render () {
     return (
       <View style={styles.container}>
         <SBGStatusBar />
-        <Text style={styles.content}>Lo, there be dragons...</Text>
+        <SBGAppBar />
       </View>
     )
   }
@@ -16,9 +17,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'steelblue',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   content: {
     color: 'white',
