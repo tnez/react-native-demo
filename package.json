@@ -32,8 +32,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "lint",
       "prettier --no-semi --single-quote --trailing-comma all --write",
+      "lint",
       "node node_modules/jest/bin/jest.js",
       "git add"
     ]

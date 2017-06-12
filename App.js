@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import SBGStatusBar from './src/components/SBGStatusBar'
 
 export default class App extends React.Component {
-  render() {
+  render () {
     return (
       <View style={styles.container}>
         <SBGStatusBar />
