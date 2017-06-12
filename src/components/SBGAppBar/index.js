@@ -1,18 +1,41 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Ionicons } from '@expo/vector-icons'
-import { StyleSheet, Text, View } from 'react-native'
+import { Alert, StyleSheet, Text, View } from 'react-native'
 
-const SBGAppBar = () => {
+const SBGAppBar = props => {
+  const { handleMenuTouch, handleOptionsTouch } = props
+
   return (
     <View style={styles.container}>
       <View style={styles.innerContainer}>
-        <Ionicons style={styles.menuIcon} name="ios-menu" size={32} />
+        <Ionicons
+          onPress={handleMenuTouch}
+          style={styles.menuIcon}
+          name="ios-menu"
+          size={32}
+        />
         <Text style={styles.title}>SearchBookGo!</Text>
         <View style={styles.spacer} />
-        <Ionicons style={styles.optionsIcon} name="ios-train" size={32} />
+        <Ionicons
+          onPress={handleOptionsTouch}
+          style={styles.optionsIcon}
+          name="ios-train"
+          size={32}
+        />
       </View>
     </View>
   )
+}
+
+SBGAppBar.propTypes = {
+  handleMenuTouch: PropTypes.func.isRequired,
+  handleOptionsTouch: PropTypes.func.isRequired,
+}
+
+SBGAppBar.defaultProps = {
+  handleMenuTouch: e => Alert.alert('Event Handled', 'You done it now foo!'),
+  handleOptionsTouch: e => Alert.alert('Train Time', 'That was a train!'),
 }
 
 const styles = StyleSheet.create({
